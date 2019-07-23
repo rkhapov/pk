@@ -1,3 +1,15 @@
 {
-    "title": "grade 5"
+    "title": "5 класс",
+    "figures": [
+        {
+            "rank": "king",
+            "color": "white",
+            "position": "e3",
+            "teacher": "ivanov"
+        },
+
+        {
+
+        }
+    ]
 }
