@@ -9,7 +9,24 @@
         },
 
         {
+            "rank": "queen",
+            "color": "black",
+            "position": "a4",
+            "teacher": "ivanov"
+        },
 
+        {
+            "rank": "pawn",
+            "color": "white",
+            "position": "b2",
+            "teacher": "ivanov"
+        },
+
+        {
+            "rank": "horse",
+            "color": "black",
+            "position": "a1",
+            "teacher": "ivanov"
         }
     ]
 }
