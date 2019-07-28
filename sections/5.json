@@ -5,28 +5,28 @@
             "rank": "king",
             "color": "white",
             "position": "e3",
-            "teacher": "ivanov"
+            "teacher": "alekseev"
         },
 
         {
             "rank": "queen",
             "color": "black",
             "position": "a4",
-            "teacher": "ivanov"
+            "teacher": "alekseev"
         },
 
         {
             "rank": "pawn",
             "color": "white",
             "position": "b2",
-            "teacher": "ivanov"
+            "teacher": "alekseev"
         },
 
         {
             "rank": "horse",
             "color": "black",
             "position": "a1",
-            "teacher": "ivanov"
+            "teacher": "alekseev"
         }
     ]
 }

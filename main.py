@@ -1,15 +1,69 @@
+import os
 import sys
 
-from PyQt5.QtGui import QPainter, QColor, QPixmap, QFont
-from PyQt5.QtWidgets import QWidget, QApplication
+from PyQt5 import QtCore
+from PyQt5.QtGui import QPainter, QColor, QPixmap, QFont, QImage
+from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QHBoxLayout
 
 import reader
-from models import Section, CellStatus
+from models import Section, CellStatus, Teacher
 
 
-class CommInfoWidget(QWidget):
-    def __init__(self, parent=None):
+class PhotoViewer(QWidget):
+    def __init__(self, image_path, size, parent=None):
         super().__init__(parent)
+        self.__size = size
+        self.__image = QImage(image_path)
+
+        if self.__image.height() != self.__image.width():
+            raise ValueError(f'image {image_path} isnt square image')
+
+        self.__ratio = self.__size / self.__image.height()
+
+        self.__update_timer = QtCore.QTimer()
+
+        self.__update_timer.timeout.connect(self.update)
+
+        self.__update_timer.start(1000 // 60)
+
+        self.setFixedSize(size, size)
+
+    def paintEvent(self, e) -> None:
+        qp = QPainter()
+        qp.begin(self)
+
+        qp.save()
+        qp.scale(self.__ratio, self.__ratio)
+        qp.drawImage(0, 0, self.__image)
+        qp.restore()
+
+        qp.end()
+
+
+class TeacherInfoWidget(QWidget):
+    def __init__(self, teacher: Teacher, size, parent=None):
+        super().__init__(parent)
+        self.__size = size
+
+        self.photo_viewer = PhotoViewer(os.path.join('teacher_info', teacher.photo_path), size)
+        self.text_viewer = QLabel(teacher.fact + '\n\nПредметы:\n' + "\n".join(teacher.subjects))
+
+        self.text_viewer.setFont(QFont('Ubuntu Mono', size * 0.1))
+        self.text_viewer.setAlignment(QtCore.Qt.AlignCenter)
+
+        layout = QHBoxLayout()
+
+        layout.addStretch(1)
+
+        layout.addWidget(self.photo_viewer)
+        layout.addWidget(self.text_viewer)
+
+        self.setLayout(layout)
+
+        p = self.palette()
+        p.setColor(self.backgroundRole(), QColor(250, 205, 140))
+
+        self.setPalette(p)
 
 
 class GameFieldWidget(QWidget):
@@ -22,11 +76,11 @@ class GameFieldWidget(QWidget):
 
         self.setFixedSize(cell_size * 5 + board_size * 2, cell_size * 5 + board_size * 2)
 
-        self.__figures_image = QPixmap('resources/figures.png')
+        self.__figures_image = QPixmap(os.path.join('resources', 'figures.png'))
 
-        self.__white = QColor(94, 85, 71)
-        self.__red = QColor(45, 12, 12)
-        self.__black = QColor(71, 52, 38)
+        self.__white = QColor(240, 218, 181)
+        self.__red = QColor(115, 33, 37)
+        self.__black = QColor(181, 135, 99)
 
     def paintEvent(self, e) -> None:
         qp = QPainter()
@@ -107,10 +161,14 @@ class MainWidget(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    section = reader.read_section(sys.argv[1])
+    # section = reader.read_section(sys.argv[1])
+    #
+    # w = GameFieldWidget(200, 40, section)
 
-    w = GameFieldWidget(100, 20, section)
+    w = TeacherInfoWidget(Teacher('alekseev.png', 'loves cft', ['subject1', 'subject2']), 400)
 
     w.show()
+
+    # w.setStyleSheet("border: 2px solid red")
 
     app.exec_()
