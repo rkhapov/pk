@@ -1,3 +1,11 @@
 {
-    "title": "grade 6"
+    "title": "6 класс",
+    "figures": [
+        {
+            "rank": "king",
+            "color": "white",
+            "position": "e3",
+            "teacher": "alekseev"
+        }
+    ]
 }

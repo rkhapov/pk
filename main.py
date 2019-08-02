@@ -2,7 +2,7 @@ import os
 import sys
 
 from PyQt5 import QtCore
-from PyQt5.QtGui import QPainter, QColor, QPixmap, QFont, QImage
+from PyQt5.QtGui import QPainter, QColor, QPixmap, QFont, QImage, QPen
 from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QHBoxLayout
 
 import reader
@@ -82,6 +82,15 @@ class GameFieldWidget(QWidget):
         self.__red = QColor(115, 33, 37)
         self.__black = QColor(181, 135, 99)
 
+        self.__teacher_to_image = {t: QPixmap(os.path.join('teacher_info', t.photo_path)) for t in
+                                   map(lambda c: c.figure.teacher, list(section.field))}
+
+        self.__update_timer = QtCore.QTimer()
+
+        self.__update_timer.timeout.connect(self.update)
+
+        self.__update_timer.start(1000 // 60)
+
     def paintEvent(self, e) -> None:
         qp = QPainter()
         qp.begin(self)
@@ -131,6 +140,37 @@ class GameFieldWidget(QWidget):
                     continue
 
                 if cell.status == CellStatus.OPEN:
+                    qp.save()
+
+                    teacher_image = self.__teacher_to_image[cell.figure.teacher]
+
+                    width = teacher_image.width()
+
+                    ratio = self.__cell_size / width
+
+                    qp.scale(ratio, ratio)
+
+                    qp.drawPixmap(
+                        (x * self.__cell_size + self.__board_size) / ratio,
+                        (y * self.__cell_size + self.__board_size) / ratio,
+                        teacher_image,
+                        0,
+                        0,
+                        width,
+                        width)
+
+                    p = QPen(QColor(0, 0, 0))
+                    p.setWidth(self.__cell_size * 0.3)
+                    qp.setPen(p)
+
+                    qp.drawRect(
+                        (x * self.__cell_size + self.__board_size) / ratio,
+                        (y * self.__cell_size + self.__board_size) / ratio,
+                        width, width
+                    )
+
+                    qp.restore()
+
                     continue
 
                 color = cell.figure.color
@@ -152,6 +192,31 @@ class GameFieldWidget(QWidget):
 
                 qp.restore()
 
+    def mousePressEvent(self, e):
+        x = e.x()
+        y = e.y()
+
+        if x < self.__board_size or x > self.width() - self.__board_size:
+            return
+
+        if y < self.__board_size or y > self.height() - self.__board_size:
+            return
+
+        x -= self.__board_size
+        y -= self.__board_size
+
+        x //= self.__cell_size
+        y //= self.__cell_size
+
+        y = 4 - y
+
+        cell = self.__section.field.get_cell_in(y, x)
+
+        if cell is None or cell.status == CellStatus.OPEN:
+            return
+
+        cell.open()
+
 
 class MainWidget(QWidget):
     def __init__(self):
@@ -161,11 +226,11 @@ class MainWidget(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    # section = reader.read_section(sys.argv[1])
-    #
-    # w = GameFieldWidget(200, 40, section)
+    section = reader.read_section(sys.argv[1])
 
-    w = TeacherInfoWidget(Teacher('alekseev.png', 'loves cft', ['subject1', 'subject2']), 400)
+    w = GameFieldWidget(100, 20, section)
+
+    # w = TeacherInfoWidget(Teacher('alekseev.png', 'loves cft', ['subject1', 'subject2']), 400)
 
     w.show()
 

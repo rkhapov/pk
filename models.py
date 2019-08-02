@@ -93,6 +93,7 @@ def string_to_cord(s: str):
 class Field:
     def __init__(self, nonempty_cells: List[Cell]):
         self.__cord_to_cell = {string_to_cord(cell.figure.position): cell for cell in nonempty_cells}
+        self.__nonempty = nonempty_cells
 
     def get_cell_in(self, y, x) -> Union[Cell, None]:
         c = y, x
@@ -101,6 +102,9 @@ class Field:
             return self.__cord_to_cell[c]
 
         return None
+
+    def __iter__(self):
+        return iter(self.__nonempty)
 
 
 class Section:
