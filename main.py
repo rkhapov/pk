@@ -51,8 +51,7 @@ class MainWidget(QWidget):
         self.__current_teacher_widget.move(
             self.__screen_size.center() - QRect(0, 0, TEACHER_INFO_SIZE * 2.015, TEACHER_INFO_SIZE * 1.045).center())
         self.__current_teacher_widget.show()
-        self.__current_teacher_widget.setFixedSize(TEACHER_INFO_SIZE * 2.02, TEACHER_INFO_SIZE * 1.05)
-        self.__current_teacher_widget.frame.setFixedSize(TEACHER_INFO_SIZE * 2.02, TEACHER_INFO_SIZE * 1.05)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

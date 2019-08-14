@@ -3,10 +3,15 @@ from typing import List, Union
 
 
 class Teacher:
-    def __init__(self, photo_path, fact, subjects):
+    def __init__(self, name, photo_path, fact, subjects):
+        self.__name = name
         self.__photo_path = photo_path
         self.__fact = fact
         self.__subjects = subjects
+
+    @property
+    def name(self):
+        return self.__name
 
     @property
     def photo_path(self):

@@ -16,7 +16,7 @@ def _read_teacher(name) -> Teacher:
         text = file.read()
         d = json.loads(text)
 
-        return Teacher(d['photo'], d['fact'], d['subjects'])
+        return Teacher(d['name'], d['photo'], d['fact'], d['subjects'])
 
 
 def _to_figure(f) -> Figure:
