@@ -1,8 +1,8 @@
 import sys
 
 from PyQt5.QtCore import QRect
-from PyQt5.QtGui import QColor
-from PyQt5.QtWidgets import QWidget, QApplication, QDesktopWidget
+from PyQt5.QtGui import QColor, QFont
+from PyQt5.QtWidgets import QWidget, QApplication, QDesktopWidget, QLabel
 
 import reader
 from GameFieldWidget import GameFieldWidget
@@ -19,6 +19,11 @@ class MainWidget(QWidget):
         super().__init__()
 
         self.__screen_size = QDesktopWidget().screenGeometry(-1)
+
+        self.__title = QLabel(section.title, self)
+        self.__title.setFont(QFont('Ubuntu Mono', self.__screen_size.height() * 0.08))
+        self.__title.move(self.__screen_size.width() / 2 - 200, self.__title.height() - 20)
+        self.__title.show()
 
         self.__field = GameFieldWidget(GAME_FIELD_SIZE, GAME_FIELD_BOARD_SIZE, section, self.show_teacher_info, self)
         self.__field.move(self.__screen_size.center() - self.__field.rect().center())
