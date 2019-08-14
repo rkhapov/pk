@@ -41,12 +41,20 @@ class TeacherInfoWidget(QWidget):
 
         vlayout.addLayout(layout)
 
-        self.setLayout(vlayout)
+        vlayout.addSpacerItem(
+            QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
         p = self.palette()
         p.setColor(self.backgroundRole(), QColor(250, 205, 140))
 
         self.setPalette(p)
 
-        # self.frame = QFrame(self)
-        self.setStyleSheet("border-style: outset; border-width: 6px; border-radius: 10px; border-color: #732125;")
+        container = QWidget(self)
+        container.setLayout(vlayout)
+
+        frame = QFrame(container)
+        frame.setStyleSheet("border-style: outset; border-width: 6px; border-radius: 10px; border-color: #732125;")
+
+        container.show()
+        frame.setFixedSize(container.size())
+
