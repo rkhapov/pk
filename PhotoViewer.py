@@ -9,8 +9,8 @@ class PhotoViewer(QWidget):
         self.__size = size
         self.__image = QImage(image_path)
 
-        if self.__image.height() != self.__image.width():
-            raise ValueError(f'image {image_path} isnt square image')
+        # if self.__image.height() != self.__image.width():
+        #     raise ValueError(f'image {image_path} isnt square image')
 
         self.__ratio = self.__size / self.__image.height()
 
