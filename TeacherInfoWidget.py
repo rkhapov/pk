@@ -56,6 +56,7 @@ class TeacherInfoWidget(QWidget):
 
     def _get_info_layout(self, teacher: Teacher, size):
         self.facts_viewer = QLabel(teacher.fact)
+        self.facts_viewer.setWordWrap(True)
         self.facts_viewer.setFont(QFont('Ubuntu Mono', size * 0.06))
         self.facts_viewer.setAlignment(QtCore.Qt.AlignCenter)
 

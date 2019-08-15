@@ -4,50 +4,36 @@
         {
             "rank": "queen",
             "color": "white",
-            "position": "g8",
-            "teacher": "barysheva_6"
-        },
-
-        {
-            "rank": "queen",
-            "color": "black",
-            "position": "e1",
-            "teacher": "barysheva_6"
+            "position": "a5",
+            "teacher": "kniga_6"
         },
 
         {
             "rank": "queen",
             "color": "white",
-            "position": "c7",
-            "teacher": "barysheva_6"
-        },
-
-        {
-            "rank": "queen",
-            "color": "black",
             "position": "d4",
             "teacher": "barysheva_6"
         },
 
         {
             "rank": "queen",
+            "color": "black",
+            "position": "c3",
+            "teacher": "alena_6"
+        },
+
+        {
+            "rank": "queen",
             "color": "white",
-            "position": "b3",
-            "teacher": "barysheva_6"
+            "position": "e2",
+            "teacher": "dasha_6"
         },
 
         {
             "rank": "queen",
             "color": "black",
-            "position": "g2",
-            "teacher": "barysheva_6"
-        },
-
-        {
-            "rank": "king",
-            "color": "black",
-            "position": "f5",
-            "teacher": "barysheva_6"
+            "position": "a2",
+            "teacher": "katya_6"
         }
     ]
 }
