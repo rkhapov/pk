@@ -1,11 +1,32 @@
 {
-    "title": "6 класс",
+    "title": "Преподаватели 6 класс",
     "figures": [
         {
             "rank": "king",
             "color": "white",
             "position": "e3",
-            "teacher": "alekseev"
+            "teacher": "kniga"
+        },
+
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "a4",
+            "teacher": "kniga"
+        },
+
+        {
+            "rank": "pawn",
+            "color": "white",
+            "position": "b2",
+            "teacher": "kniga"
+        },
+
+        {
+            "rank": "horse",
+            "color": "black",
+            "position": "a1",
+            "teacher": "kniga"
         }
     ]
 }
