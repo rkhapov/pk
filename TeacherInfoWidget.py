@@ -60,7 +60,7 @@ class TeacherInfoWidget(QWidget):
         self.facts_viewer.setFont(QFont('Ubuntu Mono', size * 0.06))
         self.facts_viewer.setAlignment(QtCore.Qt.AlignCenter)
 
-        self.subjects_viewer = QLabel('<b>Предметы:</b><br>' + "\n".join(teacher.subjects))
+        self.subjects_viewer = QLabel('<b>Предметы:</b><br>' + "<br>".join(teacher.subjects))
         self.subjects_viewer.setFont(QFont('Ubuntu Mono', size * 0.06))
         self.subjects_viewer.setAlignment(QtCore.Qt.AlignCenter)
 
