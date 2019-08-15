@@ -2,31 +2,52 @@
     "title": "Преподаватели 6 класс",
     "figures": [
         {
-            "rank": "king",
+            "rank": "queen",
             "color": "white",
-            "position": "e3",
-            "teacher": "kniga"
+            "position": "g8",
+            "teacher": "barysheva_6"
         },
 
         {
             "rank": "queen",
             "color": "black",
-            "position": "a4",
-            "teacher": "kniga"
+            "position": "e1",
+            "teacher": "barysheva_6"
         },
 
         {
-            "rank": "pawn",
+            "rank": "queen",
             "color": "white",
-            "position": "b2",
-            "teacher": "kniga"
+            "position": "c7",
+            "teacher": "barysheva_6"
         },
 
         {
-            "rank": "horse",
+            "rank": "queen",
             "color": "black",
-            "position": "a1",
-            "teacher": "kniga"
+            "position": "d4",
+            "teacher": "barysheva_6"
+        },
+
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "b3",
+            "teacher": "barysheva_6"
+        },
+
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "g2",
+            "teacher": "barysheva_6"
+        },
+
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "f5",
+            "teacher": "barysheva_6"
         }
     ]
 }

@@ -50,7 +50,7 @@ class GameFieldWidget(QWidget):
 
         qp.setPen(self.__white)
 
-        qp.setFont(QFont('Ubuntu Mono', self.__cell_size * 0.2))
+        qp.setFont(QFont('Ubuntu Mono', self.__cell_size * 0.35))
 
         for i, l in enumerate(['a', 'b', 'c', 'd', 'e']):
             qp.drawText(self.__board_size + self.__cell_size * i + self.__cell_size * 0.4,

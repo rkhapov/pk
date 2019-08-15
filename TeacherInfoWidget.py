@@ -14,10 +14,6 @@ class TeacherInfoWidget(QWidget):
         self.__size = size
 
         self.photo_viewer = PhotoViewer(os.path.join('teacher_info', teacher.photo_path), size)
-        self.text_viewer = QLabel(teacher.fact + '\n\nПредметы:\n' + "\n".join(teacher.subjects))
-
-        self.text_viewer.setFont(QFont('Ubuntu Mono', size * 0.1))
-        self.text_viewer.setAlignment(QtCore.Qt.AlignCenter)
 
         vlayout = QVBoxLayout()
 
@@ -35,7 +31,7 @@ class TeacherInfoWidget(QWidget):
         layout.addWidget(self.photo_viewer)
         layout.addSpacerItem(
             QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
-        layout.addWidget(self.text_viewer)
+        layout.addLayout(self._get_info_layout(teacher, size))
         layout.addSpacerItem(
             QtWidgets.QSpacerItem(40, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
@@ -57,4 +53,20 @@ class TeacherInfoWidget(QWidget):
 
         container.show()
         frame.setFixedSize(container.size())
+
+    def _get_info_layout(self, teacher: Teacher, size):
+        self.facts_viewer = QLabel(teacher.fact)
+        self.facts_viewer.setFont(QFont('Ubuntu Mono', size * 0.06))
+        self.facts_viewer.setAlignment(QtCore.Qt.AlignCenter)
+
+        self.subjects_viewer = QLabel('<b>Предметы:</b><br>' + "\n".join(teacher.subjects))
+        self.subjects_viewer.setFont(QFont('Ubuntu Mono', size * 0.06))
+        self.subjects_viewer.setAlignment(QtCore.Qt.AlignCenter)
+
+        layout = QVBoxLayout()
+
+        layout.addWidget(self.facts_viewer)
+        layout.addWidget(self.subjects_viewer)
+
+        return layout
 

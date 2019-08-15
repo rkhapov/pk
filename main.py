@@ -21,10 +21,10 @@ class MainWidget(QWidget):
         self.__screen_size = QDesktopWidget().screenGeometry(-1)
 
         self.__title = QLabel(section.title, self)
-        self.__title.setFont(QFont('Ubuntu Mono', self.__screen_size.height() * 0.08))
+        self.__title.setFont(QFont('Ubuntu Mono', self.__screen_size.height() * 0.06))
 
         self.__field = GameFieldWidget(self.__screen_size.height() * GAME_FIELD_SIZE_COFF,
-                                       self.__screen_size.height() * GAME_FIELD_SIZE_COFF / 5,
+                                       self.__screen_size.height() * GAME_FIELD_SIZE_COFF / 3,
                                        section, self.show_teacher_info, self)
         self.__field.move(self.__screen_size.center() - self.__field.rect().center())
 
