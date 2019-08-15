@@ -1,11 +1,18 @@
 {
-    "title": "Преподаватели 6 класса",
+    "title": "Преподаватели 6 класс",
     "figures": [
         {
             "rank": "queen",
             "color": "white",
             "position": "a5",
             "teacher": "kniga_6"
+        },
+
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "c5",
+            "teacher": "ovchinnikova_6"
         },
 
         {
@@ -34,6 +41,13 @@
             "color": "black",
             "position": "a2",
             "teacher": "katya_6"
+        },
+
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "b1",
+            "teacher": "vitya_6"
         }
     ]
 }
