@@ -1,3 +1,29 @@
 {
-    "title": "grade 7"
+    "title": "Преподаватели 7 класса",
+    "figures": [
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "e5",
+            "teacher": "kniga_7"
+        },
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "d2",
+            "teacher": "serazhetdinova_7"
+        },
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "a1",
+            "teacher": "barysheva_7"
+        },
+        {
+            "rank": "king",
+            "color": "white",
+            "position": "b3",
+            "teacher": "pershakov_7"
+        }
+    ]
 }
