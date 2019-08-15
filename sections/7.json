@@ -24,6 +24,36 @@
             "color": "white",
             "position": "b3",
             "teacher": "pershakov_7"
+        },
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "c5",
+            "teacher": "alena_7"
+        },
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "a5",
+            "teacher": "motya_7"
+        },
+        {
+            "rank": "king",
+            "color": "white",
+            "position": "d4",
+            "teacher": "vitya_7"
+        },
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "c1",
+            "teacher": "misha_7"
+        },
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "e1",
+            "teacher": "avriskin_7"
         }
     ]
 }
