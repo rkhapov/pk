@@ -1,3 +1,47 @@
 {
-    "title": "grade 8"
+    "title": "Преподаватели 8 класса",
+    "figures": [
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "e5",
+            "teacher": "kniga_7"
+        },
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "a5",
+            "teacher": "serazhetdinova_8"
+        },
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "a3",
+            "teacher": "pershakov_8"
+        },
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "b2",
+            "teacher": "katya_8"
+        },
+        {
+            "rank": "king",
+            "color": "white",
+            "position": "c2",
+            "teacher": "nohrin_8"
+        },
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "d2",
+            "teacher": "usova_8"
+        },
+        {
+            "rank": "king",
+            "color": "white",
+            "position": "e3",
+            "teacher": "danil_8"
+        }
+    ]
 }
