@@ -1,3 +1,37 @@
 {
-    "title": "grade 11"
+  "title": "Преподаватели 11 класс",
+  "figures": [
+    {
+      "rank": "queen",
+      "color": "white",
+      "position": "b4",
+      "teacher": "ev_11"
+    },
+    {
+      "rank": "queen",
+      "color": "black",
+      "position": "a1",
+      "teacher": "katya_11"
+    },
+    {
+      "rank": "queen",
+      "color": "white",
+      "position": "e4",
+      "teacher": "kniga_11"
+    },
+    {
+      "rank": "king",
+      "color": "black",
+      "position": "b2",
+      "teacher": "pershakov_11"
+    },
+    {
+      "rank": "king",
+      "color": "white",
+      "position": "d5",
+      "teacher": "rozenberg_11"
+    }
+
+
+  ]
 }
