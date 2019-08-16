@@ -4,19 +4,13 @@
         {
             "rank": "queen",
             "color": "white",
-            "position": "e5",
-            "teacher": "kniga_7"
-        },
-        {
-            "rank": "queen",
-            "color": "white",
-            "position": "a5",
+            "position": "c4",
             "teacher": "serazhetdinova_8"
         },
         {
             "rank": "king",
             "color": "black",
-            "position": "a3",
+            "position": "b3",
             "teacher": "pershakov_8"
         },
         {
@@ -40,7 +34,7 @@
         {
             "rank": "king",
             "color": "white",
-            "position": "e3",
+            "position": "d3",
             "teacher": "danil_8"
         }
     ]
