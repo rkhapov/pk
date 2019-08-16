@@ -1,3 +1,53 @@
 {
-    "title": "grade 9"
+    "title": "Преподаватели 9 класса",
+    "figures": [
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "a2",
+            "teacher": "ajzenshtejn_9"
+        },
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "b4",
+            "teacher": "dasha_9"
+        },
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "c3",
+            "teacher": "ev_9"
+        },
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "c1",
+            "teacher": "katya_9"
+        },
+        {
+            "rank": "king",
+            "color": "white",
+            "position": "d4",
+            "teacher": "motya_9"
+        },
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "a5",
+            "teacher": "nohrin_9"
+        },
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "e5",
+            "teacher": "ovchinnikova_9"
+        },
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "e1",
+            "teacher": "pershakov_9"
+        }
+    ]
 }
