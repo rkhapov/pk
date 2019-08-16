@@ -1,3 +1,71 @@
 {
-    "title": "Преподаватели информатики"
+  "title": "Преподаватели информатики",
+  "figures": [
+    {
+      "rank": "queen",
+      "color": "black",
+      "position": "a1",
+      "teacher": "alena_inf"
+    },
+    {
+      "rank": "king",
+      "color": "black",
+      "position": "d5",
+      "teacher": "avriskin_inf"
+    },
+    {
+      "rank": "queen",
+      "color": "white",
+      "position": "e2",
+      "teacher": "ev_inf"
+    },
+    {
+      "rank": "king",
+      "color": "black",
+      "position": "c4",
+      "teacher": "grysha_inf"
+    },
+    {
+      "rank": "king",
+      "color": "white",
+      "position": "a4",
+      "teacher": "ivan_inf"
+    },
+    {
+      "rank": "queen",
+      "color": "black",
+      "position": "b2",
+      "teacher": "kniga_inf"
+    },
+    {
+      "rank": "king",
+      "color": "white",
+      "position": "e5",
+      "teacher": "lan_inf"
+    },
+    {
+      "rank": "king",
+      "color": "black",
+      "position": "d1",
+      "teacher": "lozhkin_inf"
+    },
+    {
+      "rank": "king",
+      "color": "white",
+      "position": "b3",
+      "teacher": "misha_inf"
+    },
+    {
+      "rank": "queen",
+      "color": "black",
+      "position": "b5",
+      "teacher": "paltseva_inf"
+    },
+    {
+      "rank": "king",
+      "color": "white",
+      "position": "d3",
+      "teacher": "vitya_inf"
+    }
+  ]
 }
