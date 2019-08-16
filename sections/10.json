@@ -1,3 +1,41 @@
 {
-    "title": "grade 10"
+  "title": "Преподаватели 10 класс",
+  "figures": [
+    {
+      "rank": "king",
+      "color": "white",
+      "position": "a1",
+      "teacher": "ajzenshtejn_10"
+    },
+    {
+      "rank": "queen",
+      "color": "black",
+      "position": "a5",
+      "teacher": "dasha_10"
+    },
+    {
+      "rank": "king",
+      "color": "white",
+      "position": "c2",
+      "teacher": "motya_10"
+    },
+    {
+      "rank": "king",
+      "color": "black",
+      "position": "c4",
+      "teacher": "rodin_10"
+    },
+    {
+      "rank": "king",
+      "color": "white",
+      "position": "e1",
+      "teacher": "rozenberg_10"
+    },
+    {
+      "rank": "queen",
+      "color": "black",
+      "position": "e5",
+      "teacher": "usova_10"
+    }
+  ]
 }
