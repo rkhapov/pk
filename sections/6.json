@@ -3,16 +3,9 @@
     "figures": [
         {
             "rank": "queen",
-            "color": "white",
-            "position": "a5",
-            "teacher": "kniga_6"
-        },
-
-        {
-            "rank": "queen",
             "color": "black",
-            "position": "c5",
-            "teacher": "ovchinnikova_6"
+            "position": "c3",
+            "teacher": "alena_6"
         },
 
         {
@@ -25,14 +18,7 @@
         {
             "rank": "queen",
             "color": "black",
-            "position": "c3",
-            "teacher": "alena_6"
-        },
-
-        {
-            "rank": "queen",
-            "color": "white",
-            "position": "e2",
+            "position": "d1",
             "teacher": "dasha_6"
         },
 
@@ -42,6 +28,36 @@
             "position": "a2",
             "teacher": "katya_6"
         },
+
+
+        {
+            "rank": "queen",
+            "color": "white",
+            "position": "a5",
+            "teacher": "kniga_6"
+        },
+
+        {
+            "rank": "king",
+            "color": "white",
+            "position": "e3",
+            "teacher": "lozhkin_6"
+        },
+
+        {
+            "rank": "king",
+            "color": "black",
+            "position": "c2",
+            "teacher": "motya_6"
+        },
+
+        {
+            "rank": "queen",
+            "color": "black",
+            "position": "c5",
+            "teacher": "ovchinnikova_6"
+        },
+
 
         {
             "rank": "king",

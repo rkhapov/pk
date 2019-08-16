@@ -1,3 +1,5 @@
+import os
+
 from PyQt5 import QtCore
 from PyQt5.QtGui import QImage, QPainter
 from PyQt5.QtWidgets import QWidget
@@ -7,6 +9,10 @@ class PhotoViewer(QWidget):
     def __init__(self, image_path, size, parent=None):
         super().__init__(parent)
         self.__size = size
+
+        if not os.path.isfile(image_path):
+            raise ValueError(f'No file at {image_path}')
+
         self.__image = QImage(image_path)
 
         # if self.__image.height() != self.__image.width():
