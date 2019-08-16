@@ -2,31 +2,37 @@
     "title": "Преподаватели 5 класса",
     "figures": [
         {
-            "rank": "king",
+            "rank": "queen",
             "color": "white",
-            "position": "e3",
-            "teacher": "alekseev"
+            "position": "b2",
+            "teacher": "barysheva_5"
         },
 
         {
             "rank": "queen",
             "color": "black",
-            "position": "a4",
-            "teacher": "alekseev"
+            "position": "c2",
+            "teacher": "kniga_5"
         },
-
         {
-            "rank": "pawn",
+            "rank": "king",
             "color": "white",
-            "position": "b2",
-            "teacher": "alekseev"
+            "position": "d2",
+            "teacher": "pershakov_5"
         },
 
         {
-            "rank": "horse",
+            "rank": "queen",
+            "color": "white",
+            "position": "d3",
+            "teacher": "ovchinnikova_5"
+        },
+
+        {
+            "rank": "queen",
             "color": "black",
-            "position": "a1",
-            "teacher": "alekseev"
+            "position": "c4",
+            "teacher": "serazhetdinova_5"
         }
     ]
 }
